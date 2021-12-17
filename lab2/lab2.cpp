@@ -94,7 +94,7 @@ double parallel(double** A, double** B, double** C, int N, int numThread, string
             }
             #pragma omp single
             {
-                printf("Total thread(s) ijk: %d\n", omp_get_num_threads());
+                printf("Total thread(s): %d\n", omp_get_num_threads());
             }
         }
         t = omp_get_wtime() - time;
@@ -114,7 +114,7 @@ double parallel(double** A, double** B, double** C, int N, int numThread, string
             }
             #pragma omp single
             {
-                printf("Total thread(s) jki: %d\n", omp_get_num_threads());
+                printf("Total thread(s): %d\n", omp_get_num_threads());
             }        
         }
         t = omp_get_wtime() - time;

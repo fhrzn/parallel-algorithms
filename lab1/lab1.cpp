@@ -32,13 +32,9 @@ int main(int argc, char* argv[]) {
                     
                 }  
             }
-
-            #pragma omp single
-            {
-                printf("Total thread(s): %d\n", omp_get_num_threads());
-                printf("Max number: %f\n", maxVal);
-            }
         }
+        printf("Total thread(s): %d\n", omp_get_num_threads());
+        printf("Max number: %f\n", maxVal);
         printf("Time execution: %f\n", (omp_get_wtime() - time) / 100);
     }
     delete[] arr;
